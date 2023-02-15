@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "sentimentv2"
+version = "0.1.0"
+description = "Sentiment Analysis"
+authors = ["Jmarah"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "2.2.2"
+pymongo = "4.3.3"
+dnspython = "2.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

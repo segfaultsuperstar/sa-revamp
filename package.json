@@ -1,0 +1,15 @@
+{
+  "name": "sentimentv2",
+  "version": "1.0.0",
+  "description": "Sentiment Analysis Project",
+  "main": "app.py",
+  "repository": "https://github.com/segfaultsuperstar/sa-revamp.git",
+  "author": "Jmarah",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.2.6"
+  },
+  "scripts": {
+    "watch": "yarn tailwindcss -i ./static/src/css/input.css -o ./static/dist/css/styles.css --watch"
+  }
+}

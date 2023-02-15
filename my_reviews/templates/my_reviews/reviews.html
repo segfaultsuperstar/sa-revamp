@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+
+{% block head %}
+    <title>{{collection_name|title}}</title>
+{% endblock head %}
+
+{% block body %}
+    {{mac.showGames(collection_info)}}
+    <div id="reviews-container">
+    {% for review_info in collection_info %}
+        <div class='slide fade' id='revinfo{{loop.index}}'>
+            <div>
+                {{review_info['expectation']}}
+            </div>
+            <div class='review-text'>
+                {{review_info['review']}}
+            </div>
+            <div class='counter text-center'>
+                {{loop.index}}/{{doc_count}}
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+{% endblock body %}

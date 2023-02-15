@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='dist/css/styles.css')}}">
+    {% block head %}{% endblock head %}
+</head>
+<body>
+    <header class='text-white font-extrabold text-center text-4xl'><a href="/">Game Reviews</a></header>
+    {%import 'macros/macros.html' as mac%}
+    {{mac.showCollections(collection_list)}}
+    <main>
+    {% block body %}{% endblock body %}
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='dist/js/index.js')}}"></script>
+</body>
+</html>

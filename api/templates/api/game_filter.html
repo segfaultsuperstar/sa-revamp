@@ -1,0 +1,13 @@
+{% for review_info in game_info %}
+        <div class='slide fade' id='revinfo{{loop.index}}'>
+            <div>
+                {{review_info['expectation']}}
+            </div>
+            <div class = 'review-text'>
+                {{review_info['review']}}
+            </div>
+            <div class = 'counter text-center'>
+                {{loop.index}}/{{doc_count}}
+            </div>
+        </div>
+    {% endfor %}

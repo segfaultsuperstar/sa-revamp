@@ -1,0 +1,19 @@
+{% macro showCollections(dbCollection) %}
+    <div class="collection-container flex flex-row justify-center text-white">
+        {% for col in dbCollection %}
+            <div id="collection-links" class="mx-4 px-2">
+                <a href="/{{col}}/review_info/">{{col|title}}</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endmacro %}
+
+{% macro showGames(dbCollection) %}
+    <div class="games-container">
+        {% for game in dbCollection.distinct('game') %}
+            <div>
+                <a id="{{game}}" class="game-link cursor-pointer">{{game}}</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endmacro %}
