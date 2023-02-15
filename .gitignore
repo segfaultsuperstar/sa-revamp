@@ -1,6 +1,4 @@
 helpers/
 *.pyc
 node_modules/
-yarn.lock
-poetry.lock
 static/dist/css
