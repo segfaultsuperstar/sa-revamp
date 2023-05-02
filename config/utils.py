@@ -1,8 +1,8 @@
 from pymongo import MongoClient
 from .config import uname, passwd, openai_key
-import openai
+#import openai
 
-openai.api_key = openai_key
+#openai.api_key = openai_key
 
 def make_connection(host, port, username = uname, password = passwd):
     client = MongoClient(host=host,
