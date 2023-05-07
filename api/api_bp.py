@@ -3,6 +3,7 @@ from config import utils
 
 
 api_bp = Blueprint('api', __name__, template_folder="templates/api")
+utils.CORS(api_bp)
 
 db = utils.get_db('raw_review')
 

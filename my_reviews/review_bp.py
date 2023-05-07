@@ -3,6 +3,7 @@ from config import utils
 
 
 review_bp = Blueprint('review_bp', __name__, template_folder='templates/my_reviews')
+utils.CORS(review_bp)
 
 db = utils.get_db('raw_review')
 collection_list = db.list_collection_names()
