@@ -1,9 +1,7 @@
 from pymongo import MongoClient
-from .config import uname, passwd, openai_key
+from .config import uname, passwd
 from flask_cors import CORS
-#import openai
 
-#openai.api_key = openai_key
 
 def make_connection(host, port, username = uname, password = passwd):
     client = MongoClient(host=host,
