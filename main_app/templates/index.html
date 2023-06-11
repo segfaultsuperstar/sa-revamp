@@ -8,7 +8,7 @@
 </head>
 <body>
     <header class='text-white font-extrabold text-center text-4xl'><a href="/">Game Reviews</a></header>
-    {%import 'macros/macros.html' as mac%}
+    {% import 'macros/macros.html' as mac %}
     {{mac.showCollections(collection_list)}}
     <main>
     {% block body %}{% endblock body %}

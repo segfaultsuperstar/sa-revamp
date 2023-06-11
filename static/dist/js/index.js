@@ -36,7 +36,7 @@ $(".game-link").on('click', (function() {
   var cname = $('title').text().toLowerCase();
     $.ajax({
         type: "GET",
-        url: "/api/game",
+        url: "/select/game",
         data: {'game': game,
               'cname': cname,},
         success: function(db_data) {
